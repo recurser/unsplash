@@ -9,7 +9,7 @@
 	<key>Label</key>
 	<string>unsplash</string>
 	<key>Program</key>
-	<string>/usr/local/bin/unsplash-get</string>
+	<string>/Users/dave/.bin/unsplash/get.js</string>
 	<key>RunAtLoad</key>
 	<false/>
 	<key>StartInterval</key>

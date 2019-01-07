@@ -1,10 +1,15 @@
 #!/usr/local/bin/node
+
+// See:
+// - https://josephg.com/blog/shiny-background-images/
+// - https://github.com/josephg/unsplash
+
 const fetch = require('node-fetch');
 const urllib = require('url');
 const path = require('path');
 const fs = require('fs');
 
-const DEST = path.resolve(process.env.HOME, 'unsplash');
+const DEST = path.resolve(process.env.HOME, 'Dropbox', 'Images', 'Wallpapers');
 try { fs.mkdirSync(DEST); } catch(e) {}
 
 const exists = (filename) => {
