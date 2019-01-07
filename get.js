@@ -55,9 +55,7 @@ const get = (url) => {
   });
 };
 
-// Categories: buildings food nature people technology objects
 const res = '1920x1200';
-['japan'].forEach(category => {
-  //get(`https://source.unsplash.com/category/${category}/${res}/daily`);
-  get(`https://source.unsplash.com/category/${category}/featured/${res}`);
+['japan'].forEach(term => {
+  get(`https://source.unsplash.com/${res}/?${term}`);
 });
