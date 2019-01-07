@@ -56,8 +56,8 @@ const get = (url) => {
 };
 
 // Categories: buildings food nature people technology objects
-const res = '2560x1440';
-['buildings', 'food', 'nature', 'objects', 'people'].forEach(category => {
+const res = '1920x1200';
+['japan'].forEach(category => {
   //get(`https://source.unsplash.com/category/${category}/${res}/daily`);
   get(`https://source.unsplash.com/category/${category}/featured/${res}`);
 });
