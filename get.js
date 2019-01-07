@@ -8,6 +8,7 @@ const fetch = require('node-fetch');
 const urllib = require('url');
 const path = require('path');
 const fs = require('fs');
+const findRemoveSync = require('find-remove');
 
 const DEST = path.resolve(process.env.HOME, 'Dropbox', 'Images', 'Wallpapers');
 try { fs.mkdirSync(DEST); } catch(e) {}
@@ -21,6 +22,10 @@ const exists = (filename) => {
   }
 }
 
+const cleanup = () => {
+  // Delete any files older than a week.
+  result = findRemoveSync(DEST, { age: { seconds: 604800 }, extensions: '.jpeg', limit: 100 });
+}
 
 const get = (url) => {
   fetch(url, {redirect: 'manual'})
@@ -54,6 +59,8 @@ const get = (url) => {
     console.error(e.stack);
   });
 };
+
+cleanup();
 
 const res = '1920x1200';
 ['japan'].forEach(term => {

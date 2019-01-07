@@ -4,6 +4,7 @@
   "description": "",
   "main": "get.js",
   "dependencies": {
+    "find-remove": "^1.2.2",
     "node-fetch": "^1.5.3"
   },
   "devDependencies": {},
